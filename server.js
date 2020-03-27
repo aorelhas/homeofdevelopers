@@ -6,6 +6,9 @@ const app = express();
 // Connect DataBase
 connectDB();
 
+// Init middleware to body-parser
+app.use(express.json({ extendend: false }));
+
 app.get('/', (req, res) => res.send('API running'));
 
 // Define Routes
